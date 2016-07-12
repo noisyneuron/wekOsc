@@ -1,0 +1,26 @@
+{
+  "name": "weksockets",
+  "version": "1.0.0",
+  "description": "To run:",
+  "main": "server.js",
+  "dependencies": {
+    "socket.io": "^1.4.8",
+    "express": "^4.14.0",
+    "osc-min": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noisyneuron/wekOsc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noisyneuron/wekOsc/issues"
+  },
+  "homepage": "https://github.com/noisyneuron/wekOsc#readme"
+}
