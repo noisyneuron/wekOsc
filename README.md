@@ -1,7 +1,9 @@
 To run:
 
-`npm install`
-`node server.js`
+```
+npm install
+node server.js
+```
 
 Open Wekinator and set it to listen on post 3333 with 3 inputs. Go to View > Inputs to see the data.
 
