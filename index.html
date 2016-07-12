@@ -1,0 +1,34 @@
+<html>
+<head>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  
+
+  <script>
+    var socket = io.connect('http://192.168.1.150:3000');
+
+    var mx=0, my=0;
+    document.ontouchmove = function(e) {
+      var tx = e.clientX || e.pageX || 0;
+      var ty = e.clientY || e.pageY || 0;
+      mx = tx/window.innerWidth;
+      my = ty/window.innerHeight;
+
+      socket.emit('mouseMoveEvent', { x: mx, y:my });
+    }
+
+    document.onmousemove = function(e) {
+      mx = e.clientX/window.innerWidth;
+      my = e.clientY/window.innerHeight;
+
+      socket.emit('mouseMoveEvent', { x: mx, y:my });
+    }
+    socket.on('news', function (data) {
+      console.log(data);
+    });
+
+
+  </script>
+</body>
+</html>
